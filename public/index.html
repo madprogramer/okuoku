@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oku Oku</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.2.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.2.0/firebase-auth.js"></script>
+    <!-- <script defer src="/__/firebase/5.2.0/firebase-database.js"></script> -->
+    <script defer src="/__/firebase/5.2.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/5.2.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.2.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+
+  </head>
+  <body>
+
+<!-- HOME -->
+<div id="Home">
+    <!-- TITLE -->
+    <div id="mainTitle" class="jumbotron text-center" >
+      <h1>Oku Oku</h1>
+    </div>
+
+    <!-- SEARCH -->
+    <div id="textSearch" class="jumbotron text-center" >
+        <input id="search">
+    </div>
+    
+
+    <!-- QUERY RESULTS LIMIT THESE TO 10 FOR NOW -->
+    <div class="text-center">
+    <table id="textResults" class="table" style="display:none">
+        <tbody id="textResultsBody">
+        </tbody>
+    </table>
+    </div>
+
+    <!--No Results -->
+    <div id="noResults" class="text-center" style="display:none">
+        <h3 id="noResultText">Bulunamadı</h3>
+    </div>
+
+    <!-- ADD NEW ENTRY-->
+    <div class="text-center"> <button id='newTextButton' type="button" class="btn btn-default text-center" id="addNewText" style="display:none">Yeni Kelime Gireceğim</button>
+    </div>
+</div>
+
+<!-- ADD NEW ENTRY MENU-->
+    <!-- -->
+
+    <!-- -->
+
+<!-- VIEW ENTRY -->
+<div id="WordView" style="display:none">
+    <div class="text-left">
+        <button id="backHome" type="button">Geri</button>
+    </div>
+    <br>
+    <div class="text-center">
+        <ul class="list-group">
+            <h2><li>
+                <span id="viewWord">Kelime:</span>
+            </li>
+
+            <li>
+                <span id="viewLanguage">Dil:</span>
+            </li>
+
+            <li>
+                <span id="viewPronunciation">Telâffuz:</span>
+            </li>
+
+            <li id="editViewLI">
+                <button id="editView" type="button">Edit</button>
+            </li></h2>
+        </ul>
+    </div>
+
+    <!-- Add New Meaning -->
+    <div id="NewMeaning" style="display:none">
+        <div class="text-center">
+            <button id="giveNewMeaning" type="button">Yeni Mânâ Ekleyeceğim</button>
+        </div>
+    </div>
+
+    <!--Edit Meaning-->
+    <div id="NewMeaning" style="display:none">
+        <div class="text-center">
+
+            <!--  -->
+
+            <!--  -->
+            
+            <!--  -->
+            
+        </div>
+    </div>
+
+    <!-- Add New Link -->
+    <div id="NewMeaning" style="display:none">
+        <div class="text-center">
+            <button id="addNewLink" type="button">Alâkalı Kelime Ekleyeceğim</button>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- EDIT ENTRY -->
+<div id="WordEdit" style="display:none">
+    <div class="text-left">
+        <div class="form-group">
+            <h2 id="newOneText">Yenisi</h2>
+            <!-- <h4><label for="wordInp" id="viewWordLabel">Kelime:</label>
+            <input type="text" class="form-control" id="wordInp"> -->
+            <label for="languageInp" id="viewLanguageLabel" >Dil:</label>
+            <input type="text" class="form-control" id="languageInp">
+
+            <label for="pronunciationInp" id="viewPronunciationLabel">Telâffuz (IPA):</label>
+            <input type="text" class="form-control" id="pronunciationInp">
+
+            <button id="textEditSubmit" type="button">Tamam</button>
+            <button id="textEditCancel" type="button">İptal</button></h4>
+        </div>
+    </div>
+</div>
+
+<!-- LOADING -->
+<div id="Loading" style="display:none">
+    <div class="text-center">
+        <h2 id="loadingText">Yükleniyor...</h2>
+    </div>
+</div>
+
+
+
+
+    <script src="main.js"></script>
+
+    <script src="localize.js"></script>
+    
+    </body>
+</html>
